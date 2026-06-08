@@ -273,12 +273,20 @@ footer{background:var(--ink);color:rgba(255,255,255,.6);padding:56px 40px 32px;b
 .cloud.c6{--s:1.1;top:78%;opacity:.9;animation-duration:50s;animation-delay:-8s}
 @keyframes drift{from{transform:translateX(-180px) scale(var(--s))}to{transform:translateX(100vw) scale(var(--s))}}
 @media(prefers-reduced-motion:reduce){.cloud{animation:none;display:none}}
+
+.logo-img{height:42px;width:auto;display:block}
+
+/* hero card bob */
+.hcard{animation:bob 3.4s ease-in-out infinite}
+.hcard:nth-child(2){animation-delay:.45s}.hcard:nth-child(3){animation-delay:.9s}.hcard:nth-child(4){animation-delay:1.35s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){.hcard{animation:none}}
 </style>
 </head>
 <body>
 <div id="scrollbar"></div>
 <nav>
-  <a href="index.html" class="logo"><div class="logo-dot">🏰</div>Castlemania</a>
+  <a href="index.html" class="logo"><img class="logo-img" src="https://www.castlemaniabouncycastles.com/theme/castlemania-logo@1x.png" alt="Castlemania Bouncy Castle Hire"></a>
   <ul class="nav-links">
     <li><a href="index.html" class="on">Home</a></li>
     <li class="has-drop"><a href="#">Products ▾</a><div class="drop"><a href="category/some-of-our-castles/">Some of our Castles</a><a href="category/giant-castles/">Giant Castles</a><a href="category/bouncy-castles/">Bouncy Castles</a><a href="category/giant-slides/">Giant Slides</a><a href="category/bounce-and-slide/">Bounce &amp; Slide</a><a href="category/cakes-and-party-foods/">Cakes &amp; Party Foods</a><a href="category/sweet-treats/">Sweet Treats</a><a href="category/new-inn/">New In!</a></div></li>
@@ -342,11 +350,14 @@ footer{background:var(--ink);color:rgba(255,255,255,.6);padding:56px 40px 32px;b
 
 <div class="offers-wrap">
 <section class="sec" id="offers">
-  <div class="sec-head"><h2>Special offer 🎉</h2><p>Our current multi-day deal. Just mention it when you book.</p></div>
+  <div class="sec-head"><h2>Special offers 🎉</h2><p>Seasonal deals worth grabbing. Just mention them when you book.</p></div>
   <div class="offers-grid">
-    <div class="offer hot"><span class="badge">CURRENT OFFER</span><div class="o-icon">🎉</div><h3>2nd day €30, 3rd day FREE</h3><p>Hiring for the weekend? Pay full price for day one, just €30 for the second day, and the third day is free.</p></div>
-    <div class="offer"><div class="o-icon">🚚</div><h3>Delivery &amp; setup included</h3><p>We deliver, set up on safety mats and stakes, and collect after your event. No hidden costs.</p></div>
-    <div class="offer"><div class="o-icon">💬</div><h3>Not sure which fits?</h3><p>Give us a call or WhatsApp and we will sort the best deal and the right castle for your date.</p></div>
+    <div class="offer hot"><span class="badge">BEST</span><div class="o-icon">🎈</div><h3>Bank Holiday Special</h3><p>3 days for the price of 1. Make the most of the long weekend.</p></div>
+    <div class="offer"><div class="o-icon">☀️</div><h3>Summer Special</h3><p>Pay for day one, get the second for just €30, and the third day free.</p></div>
+    <div class="offer"><div class="o-icon">📅</div><h3>Midweek Offer</h3><p>10% off any booking from Monday to Thursday.</p></div>
+    <div class="offer"><div class="o-icon">🌸</div><h3>Spring &amp; Autumn</h3><p>March, April and September: 2 days for the price of 1.</p></div>
+    <div class="offer"><div class="o-icon">❄️</div><h3>Winter Prices</h3><p>November to February: €50 off all units.</p></div>
+    <div class="offer"><div class="o-icon">💬</div><h3>Not sure which fits?</h3><p>Call or WhatsApp and we will sort the best deal for your date.</p></div>
   </div>
 </section>
 </div>
@@ -396,7 +407,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.6);padding:56px 40px 32px;b
 
 <footer>
   <div class="ft-inner">
-    <div class="ft-brand"><div class="logo"><div class="logo-dot">🏰</div>Castlemania</div><p>Bouncy castle hire in Laois, Kildare, Kilkenny, Tipperary, Offaly and Carlow. Family-run from Mountrath, Co. Laois since 2018.</p></div>
+    <div class="ft-brand"><div class="logo"><img class="logo-img" src="https://www.castlemaniabouncycastles.com/theme/castlemania-logo@1x.png" alt="Castlemania Bouncy Castle Hire"></div><p>Bouncy castle hire in Laois, Kildare, Kilkenny, Tipperary, Offaly and Carlow. Family-run from Mountrath, Co. Laois since 2018.</p></div>
     <div class="ft-col"><h4>Products</h4><ul>
       <li><a href="category/some-of-our-castles/">Some of our Castles</a></li><li><a href="category/giant-castles/">Giant Castles</a></li><li><a href="category/bouncy-castles/">Bouncy Castles</a></li><li><a href="category/giant-slides/">Giant Slides</a></li><li><a href="category/bounce-and-slide/">Bounce &amp; Slide</a></li><li><a href="category/cakes-and-party-foods/">Cakes &amp; Party Foods</a></li><li><a href="category/sweet-treats/">Sweet Treats</a></li><li><a href="category/new-inn/">New In!</a></li>
     </ul></div>

@@ -1,14 +1,7 @@
--- Bulk-insert Castlemania Bouncy Castles inventory into PartyOps.
+-- Bulk-insert Castlemania Bouncy Castles inventory into PartyOps (33 items).
 -- Business: Castlemania Bouncy Castles (Mountrath, Co. Laois)
--- business_id matches the widget data-business-id on castlemaniabouncycastles.com.
---
--- Slugs match the product page URLs on the Castlemania site so the widget can
--- pre-fill a product via ?item=<slug>.
---
--- Image URLs hotlink the existing photos for now; re-upload into PartyOps
--- storage later if desired.
---
--- Idempotent: ON CONFLICT (business_id, slug) DO NOTHING means re-running is safe.
+-- business_id matches the widget data-business-id. Slugs match the site product URLs.
+-- Idempotent: ON CONFLICT (business_id, slug) DO NOTHING.
 
 insert into products
   (business_id, name, description, price_per_day, image_url, quantity_available, delivery_fee, slug)
@@ -39,9 +32,19 @@ values
   ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Avengers Giant Combi', 'Marvel Avengers giant combi with bounce area and slide. Iron Man, Hulk, Thor and more.', 150, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/8262bbdeee886145ac9b182bf9c902a5', 1, 0, 'avengers-giant-combi'),
   ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Spiderman Bounce & Slide', 'Action-packed Spiderman bounce-and-slide with a roomy bounce area and slide. Great for ages 3-12.', 140, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/81adca2f64d2ec03999fd700b5a4584a', 1, 0, 'spiderman-bounce-and-slide'),
   ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'The City of Spiderman Cakes Selection', 'Spiderman-themed cake and treats selection, made to order.', 70, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/1d994f7ce959fceb94a9745167758841', 1, 0, 'the-city-of-spiderman-cakes-selection'),
-  ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Queen Elsa Cake', 'Custom Frozen / Elsa cake. Choose your size, flavour and filling. Delivery available.', 60, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/563fd682af1f57f97aeb541ee9c40d49', 1, 0, 'queen-elsa-cake'),
-  ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Barbie Cake', 'Custom Barbie-themed celebration cake, made to your size and flavour.', 50, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/1485c722b5ae11332766f5b0e7e795cb', 1, 0, 'barbie-cake'),
-  ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Princess Party Cake', 'Custom princess party cake in various sizes and flavours, tailored to your theme.', 40, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/42b46c3266ef367b213530f6bbd99eda', 1, 0, 'princess-party-cake'),
+  ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Queen Elsa Cake', 'Custom Frozen / Elsa cake. Choose your size, flavour and filling. Delivery available.', 65, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/563fd682af1f57f97aeb541ee9c40d49', 1, 0, 'queen-elsa-cake'),
+  ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Barbie Cake', 'Custom Barbie-themed celebration cake, made to your size and flavour.', 65, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/1485c722b5ae11332766f5b0e7e795cb', 1, 0, 'barbie-cake'),
+  ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Princess Party Cake', 'Custom princess party cake in various sizes and flavours, tailored to your theme.', 65, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/42b46c3266ef367b213530f6bbd99eda', 1, 0, 'princess-party-cake'),
   ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Sweet Treats Selection', 'Selection of themed sweets and desserts from EUR4 a piece, personalised to your party.', 4, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/0f0df049d226c7bb16aa9cd3989e575c', 1, 0, 'sweet-treats-selection'),
-  ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Mermaid Cake', 'Handcrafted mermaid-themed cake with custom colours, flavours and dietary options.', 50, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/b31cce9343dab875e113a91b65c3a05d', 1, 0, 'mermaid-cake')
+  ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Mermaid Cake', 'Handcrafted mermaid-themed cake with custom colours, flavours and dietary options.', 65, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/b31cce9343dab875e113a91b65c3a05d', 1, 0, 'mermaid-cake'),
+  ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'Castle & Cake Bundle', 'Book a bouncy castle and a themed cake together and get 12 themed cupcakes free.', 0, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/1485c722b5ae11332766f5b0e7e795cb', 1, 0, 'castle-and-cake-bundle'),
+  ('540aba40-0419-4142-8cec-a44aa1465451'::uuid, 'VIP Pamper Party', 'The full treat: pampering for up to 6, a themed cake, 12 cupcakes and a bouncy castle.', 340, 'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/42b46c3266ef367b213530f6bbd99eda', 1, 0, 'vip-pamper-party')
 on conflict (business_id, slug) where slug is not null do nothing;
+
+-- 'Call for price' items (booking flow hidden, contact details shown)
+update products set price_on_request = true
+where business_id = '540aba40-0419-4142-8cec-a44aa1465451'::uuid and slug in ('castle-and-cake-bundle');
+
+-- Price corrections (apply even if an earlier seed already inserted these rows)
+update products set price_per_day = 65
+where business_id = '540aba40-0419-4142-8cec-a44aa1465451'::uuid and slug in ('barbie-cake','princess-party-cake','queen-elsa-cake','mermaid-cake');
