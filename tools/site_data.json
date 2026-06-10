@@ -1,0 +1,594 @@
+{
+ "products": [
+  {
+   "path": "category/bounce-and-slide/avengers-giant-combi.html",
+   "cat": "bounce-and-slide",
+   "name": "Avengers Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/8262bbdeee886145ac9b182bf9c902a5",
+   "desc": "Marvel Avengers giant combi with bounce area and slide. Iron Man, Hulk, Thor and more.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "20ft x 23ft (needs 23ft x 26ft, 10ft access)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Avengers Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Marvel Avengers giant combi with bounce area and slide. Iron Man, Hulk, Thor and more. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/bounce-and-slide/lego-movie-giant-combi.html",
+   "cat": "bounce-and-slide",
+   "name": "Lego Movie Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/ed4d79a92cc50c85456cba640b296f5b",
+   "desc": "Lego Movie giant combi with a spacious bounce area and smooth large slide.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "20ft x 23ft (needs 23ft x 26ft, 10ft access)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Lego Movie Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Lego Movie giant combi with a spacious bounce area and smooth large slide. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/bounce-and-slide/spiderman-bounce-and-slide.html",
+   "cat": "bounce-and-slide",
+   "name": "Spiderman Bounce & Slide",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/81adca2f64d2ec03999fd700b5a4584a",
+   "desc": "Action-packed Spiderman bounce-and-slide with a roomy bounce area and slide. Great for ages 3-12.",
+   "specs": {
+    "Price": "From \u20ac140",
+    "Size": "19.7ft x 14.8ft (needs 22ft x 17.8ft, 5ft access)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Spiderman Bounce & Slide - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Action-packed Spiderman bounce-and-slide with a roomy bounce area and slide. Great for ages 3-12. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/bouncy-castles/elsas-frozen-castle.html",
+   "cat": "bouncy-castles",
+   "name": "Elsas Frozen Castle",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/386d01300c2fbe7dc5b7ef1a0a14a1ac",
+   "desc": "Frozen-themed castle with built-in slide and icy blue graphics. Plenty of room to bounce and play.",
+   "specs": {
+    "Price": "From \u20ac140",
+    "Size": "19.7ft x 14.8ft (needs 22ft x 17.8ft, 5ft access)",
+    "Suitable for": "Children Only"
+   },
+   "title": "Elsas Frozen Castle - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Frozen-themed castle with built-in slide and icy blue graphics. Plenty of room to bounce and play. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/bouncy-castles/lego-batman-combi.html",
+   "cat": "bouncy-castles",
+   "name": "Lego Batman Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/336d0866a84d7ce02da2d91535acfddd",
+   "desc": "Lego Batman combi pairing a bounce area with a slide. Bold superhero graphics kids love.",
+   "specs": {
+    "Price": "From \u20ac120",
+    "Size": "11.5ft x 15ft (needs 14.5ft x 18ft)",
+    "Suitable for": "Children Only"
+   },
+   "title": "Lego Batman Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Lego Batman combi pairing a bounce area with a slide. Bold superhero graphics kids love. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/bouncy-castles/lego-friends-medium-combi.html",
+   "cat": "bouncy-castles",
+   "name": "Lego Friends Medium Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/c44cdde9cdab206f0877ac3793e8b95c",
+   "desc": "Compact Lego Friends combi with bounce area and slide. Fits smaller gardens. Ideal for ages 3-10.",
+   "specs": {
+    "Price": "From \u20ac110",
+    "Size": "Medium combi, fits smaller gardens",
+    "Suitable for": "Children (3-10)"
+   },
+   "title": "Lego Friends Medium Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Compact Lego Friends combi with bounce area and slide. Fits smaller gardens. Ideal for ages 3-10. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/bouncy-castles/paw-patrol-medium-combi.html",
+   "cat": "bouncy-castles",
+   "name": "Paw Patrol Medium Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/c1916145d10beeadd8498595b112806f",
+   "desc": "Medium Paw Patrol combi with bounce area and slide. Fits more compact spaces.",
+   "specs": {
+    "Price": "From \u20ac145",
+    "Size": "18ft x 15ft (needs 21ft x 18ft)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Paw Patrol Medium Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Medium Paw Patrol combi with bounce area and slide. Fits more compact spaces. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/bouncy-castles/small-princess-bouncer.html",
+   "cat": "bouncy-castles",
+   "name": "Small Princess Bouncer",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/5f3e92aeda48e647e725b3d0db4bfe68",
+   "desc": "Compact princess-themed bouncer made for small gardens. Perfect for younger children (2-8).",
+   "specs": {
+    "Price": "From \u20ac100",
+    "Size": "13.2ft x 13.2ft (needs 16.4ft x 16ft)",
+    "Suitable for": "Children Only"
+   },
+   "title": "Small Princess Bouncer - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Compact princess-themed bouncer made for small gardens. Perfect for younger children (2-8). Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/cakes-and-party-foods/barbie-cake.html",
+   "cat": "cakes-and-party-foods",
+   "name": "Barbie Cake",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/1485c722b5ae11332766f5b0e7e795cb",
+   "desc": "Custom Barbie-themed celebration cake, made to your size and flavour.",
+   "specs": {
+    "Price": "From \u20ac65",
+    "Size": "Made to order",
+    "Suitable for": "Custom cake"
+   },
+   "title": "Barbie Cake - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Custom Barbie-themed celebration cake, made to your size and flavour. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/cakes-and-party-foods/castle-and-cake-bundle.html",
+   "cat": "cakes-and-party-foods",
+   "name": "Castle & Cake Bundle",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/1485c722b5ae11332766f5b0e7e795cb",
+   "desc": "Book a bouncy castle and a themed cake together and get 12 themed cupcakes free.",
+   "specs": {
+    "Price": "Call for price",
+    "Size": "Castle + cake package",
+    "Suitable for": "Party package"
+   },
+   "title": "Castle & Cake Bundle - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Book a bouncy castle and a themed cake together and get 12 themed cupcakes free. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/cakes-and-party-foods/princess-party-cake.html",
+   "cat": "cakes-and-party-foods",
+   "name": "Princess Party Cake",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/42b46c3266ef367b213530f6bbd99eda",
+   "desc": "Custom princess party cake in various sizes and flavours, tailored to your theme.",
+   "specs": {
+    "Price": "From \u20ac65",
+    "Size": "Made to order",
+    "Suitable for": "Custom cake"
+   },
+   "title": "Princess Party Cake - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Custom princess party cake in various sizes and flavours, tailored to your theme. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/cakes-and-party-foods/queen-elsa-cake.html",
+   "cat": "cakes-and-party-foods",
+   "name": "Queen Elsa Cake",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/563fd682af1f57f97aeb541ee9c40d49",
+   "desc": "Custom Frozen / Elsa cake. Choose your size, flavour and filling. Delivery available.",
+   "specs": {
+    "Price": "From \u20ac65",
+    "Size": "Made to order",
+    "Suitable for": "Custom cake"
+   },
+   "title": "Queen Elsa Cake - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Custom Frozen / Elsa cake. Choose your size, flavour and filling. Delivery available. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/cakes-and-party-foods/sweet-treats-selection.html",
+   "cat": "cakes-and-party-foods",
+   "name": "Sweet Treats Selection",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/0f0df049d226c7bb16aa9cd3989e575c",
+   "desc": "Selection of themed sweets and desserts from EUR4 a piece, personalised to your party.",
+   "specs": {
+    "Price": "From \u20ac4",
+    "Size": "Per piece",
+    "Suitable for": "Sweets & desserts"
+   },
+   "title": "Sweet Treats Selection - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Selection of themed sweets and desserts from EUR4 a piece, personalised to your party. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/cakes-and-party-foods/the-city-of-spiderman-cakes-selection.html",
+   "cat": "cakes-and-party-foods",
+   "name": "The City of Spiderman Cakes Selection",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/1d994f7ce959fceb94a9745167758841",
+   "desc": "Spiderman-themed cake and treats selection, made to order.",
+   "specs": {
+    "Price": "From \u20ac70",
+    "Size": "Made to order",
+    "Suitable for": "Custom cakes"
+   },
+   "title": "The City of Spiderman Cakes Selection - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Spiderman-themed cake and treats selection, made to order. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/cakes-and-party-foods/vip-pamper-party.html",
+   "cat": "cakes-and-party-foods",
+   "name": "VIP Pamper Party",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/42b46c3266ef367b213530f6bbd99eda",
+   "desc": "The full treat: pampering for up to 6, a themed cake, 12 cupcakes and a bouncy castle.",
+   "specs": {
+    "Price": "From \u20ac340",
+    "Size": "Party package for 6",
+    "Suitable for": "Party package"
+   },
+   "title": "VIP Pamper Party - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "The full treat: pampering for up to 6, a themed cake, 12 cupcakes and a bouncy castle. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/barbie-dreamhouse-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "Barbie Dreamhouse Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/86125a372b01cb0c51b1b2c894541b95",
+   "desc": "Giant Barbie combi with a large double slide and big bounce area. A real showstopper for parties.",
+   "specs": {
+    "Price": "From \u20ac180",
+    "Size": "Giant combi with double slide",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Barbie Dreamhouse Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Giant Barbie combi with a large double slide and big bounce area. A real showstopper for parties. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/disney-princess-castle-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "Disney Princess Castle Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/f6ac409a1a207a0b4f2cd5a281bdeda6",
+   "desc": "Giant princess-themed combi with bounce area, basketball hoop and slide. A magical centrepiece for birthdays and communions.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "20ft x 23ft (needs 23ft x 26ft, 10ft access)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Disney Princess Castle Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Giant princess-themed combi with bounce area, basketball hoop and slide. A magical centrepiece for birthdays and communions. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/frozen-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "Frozen Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/7de97bf2cbe7b41acbcf04f501b26ad7",
+   "desc": "Giant Frozen castle combi with a large slide and fun obstacles inside.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "23ft x 23ft (needs 26ft x 26ft, 10ft access)",
+    "Suitable for": "Children"
+   },
+   "title": "Frozen Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Giant Frozen castle combi with a large slide and fun obstacles inside. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/gru-and-the-minions-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "Gru & The Minions Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/f7f31a810d052c62d0fef6bd75b5022f",
+   "desc": "Despicable Me giant combi with slide. Gru and the Minions for non-stop family fun.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "21.5ft x 23ft (needs 23ft x 26.5ft)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Gru & The Minions Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Despicable Me giant combi with slide. Gru and the Minions for non-stop family fun. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/lightning-mcqueen-cars-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "Lightning McQueen / Cars Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/19a1847f4e9f998e6c2f4b98384b0f9f",
+   "desc": "Cars-themed giant combi with bounce area and a large slide. A favourite for racing fans.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "24ft x 24ft (needs 26ft x 26ft, 3ft platform)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Lightning McQueen / Cars Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Cars-themed giant combi with bounce area and a large slide. A favourite for racing fans. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/lol-doll-house-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "L.O.L Doll House Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/0657886388ee22bed3d43a9940032b4b",
+   "desc": "Bright L.O.L themed giant combi with slide and spacious play zones.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "20ft x 23ft (needs 23ft x 26ft, 10ft access)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "L.O.L Doll House Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Bright L.O.L themed giant combi with slide and spacious play zones. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/minecraft-obstacle-course.html",
+   "cat": "giant-castles",
+   "name": "Minecraft Obstacle Course",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/4a61e7a9adbb0e4a4a91ef529bbc203d",
+   "desc": "Giant 9m x 4m Minecraft obstacle course with multiple sections. High-energy fun for ages 5+.",
+   "specs": {
+    "Price": "From \u20ac180",
+    "Size": "9m x 4m giant unit",
+    "Suitable for": "Children (5+)"
+   },
+   "title": "Minecraft Obstacle Course - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Giant 9m x 4m Minecraft obstacle course with multiple sections. High-energy fun for ages 5+. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/paw-patrol-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "Paw Patrol Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/2847f1309ff935336e505b26ce7ec1ba",
+   "desc": "Giant Paw Patrol combi with large slide and rainproof canopy. A party favourite.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "20ft x 23ft (needs 23ft x 26.3ft)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Paw Patrol Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Giant Paw Patrol combi with large slide and rainproof canopy. A party favourite. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/poppy-and-troll-gang-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "Poppy and Troll Gang Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/8c5066dac510e5b2b053a995859cdf0c",
+   "desc": "Colourful Trolls-themed giant combi with slide and big bounce area. Overnight hire available.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "24ft x 24ft (needs 26ft x 26ft)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Poppy and Troll Gang Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Colourful Trolls-themed giant combi with slide and big bounce area. Overnight hire available. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/rainbow-high-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "Rainbow High Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/101c62efce7cdbddc346c3c93e53ccbb",
+   "desc": "Vibrant Rainbow High giant combi with a large slide and roomy bounce area.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "23ft x 20ft (needs 26.3ft x 23ft)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Rainbow High Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Vibrant Rainbow High giant combi with a large slide and roomy bounce area. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/spiderman-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "Spiderman Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/e1c12e5e226a69daa70ca61a7d36e410",
+   "desc": "Giant Spiderman combi with a large slide and internal obstacles. Rainproof design.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "20ft x 23ft (needs 23ft x 26ft, 10ft access)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Spiderman Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Giant Spiderman combi with a large slide and internal obstacles. Rainproof design. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/toy-story-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "Toy Story Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/8ae07af231da7114514b882b19e46967",
+   "desc": "Giant Toy Story combi with large slide and internal obstacles. Buzz, Woody and the gang.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "22.2ft x 26ft (needs 26.2ft x 27ft)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Toy Story Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Giant Toy Story combi with large slide and internal obstacles. Buzz, Woody and the gang. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-castles/unicorn-giant-combi.html",
+   "cat": "giant-castles",
+   "name": "Unicorn Giant Combi",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/91accc4fb150cf9bfe3254434fb59d01",
+   "desc": "Magical unicorn-themed giant combi, fully rainproof, with plenty of bounce space. Special offer price.",
+   "specs": {
+    "Price": "From \u20ac120",
+    "Size": "19ft x 16ft (needs 21ft x 21ft)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Unicorn Giant Combi - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Magical unicorn-themed giant combi, fully rainproof, with plenty of bounce space. Special offer price. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-slides/giant-candy-slide.html",
+   "cat": "giant-slides",
+   "name": "Giant Candy Slide",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/8568ea61a1ce06278eae616190f814e1",
+   "desc": "Colourful candy-themed giant slide. A standout centrepiece for any event.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "26ft x 17ft (needs 22ft x 33ft, 10ft access)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Giant Candy Slide - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Colourful candy-themed giant slide. A standout centrepiece for any event. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-slides/giant-sonic-slide.html",
+   "cat": "giant-slides",
+   "name": "Giant Sonic Slide",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/e3be9b19a13bdb3a09f7a3a71eb64f29",
+   "desc": "Sonic-themed giant double-lane slide for head-to-head racing. Suits kids, teens and adults.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "Giant double-lane slide",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Giant Sonic Slide - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Sonic-themed giant double-lane slide for head-to-head racing. Suits kids, teens and adults. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-slides/the-giant-barbie-princess-with-double-slide.html",
+   "cat": "giant-slides",
+   "name": "The Giant Barbie Princess with Double Slide",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/424ab3d9cd4fd8627b8b13697b0616ee",
+   "desc": "Huge Barbie-themed unit with two slides so more kids can play at once. Grass surfaces only.",
+   "specs": {
+    "Price": "From \u20ac190",
+    "Size": "26ft x 34ft (needs 28ft x 36ft, 10ft access)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "The Giant Barbie Princess with Double Slide - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Huge Barbie-themed unit with two slides so more kids can play at once. Grass surfaces only. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/giant-slides/tropical-forest-slide.html",
+   "cat": "giant-slides",
+   "name": "Tropical Forest Slide",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/c863904fd99a86f1cd979b7131e8c9ac",
+   "desc": "Towering jungle-themed giant slide. Fast, thrilling and eye-catching for big groups.",
+   "specs": {
+    "Price": "From \u20ac150",
+    "Size": "23ft x 33ft (needs 26ft x 36ft, 10ft access)",
+    "Suitable for": "Adults & Children"
+   },
+   "title": "Tropical Forest Slide - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Towering jungle-themed giant slide. Fast, thrilling and eye-catching for big groups. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  },
+  {
+   "path": "category/sweet-treats/mermaid-cake.html",
+   "cat": "sweet-treats",
+   "name": "Mermaid Cake",
+   "img": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/b31cce9343dab875e113a91b65c3a05d",
+   "desc": "Handcrafted mermaid-themed cake with custom colours, flavours and dietary options.",
+   "specs": {
+    "Price": "From \u20ac65",
+    "Size": "Made to order",
+    "Suitable for": "Custom cake"
+   },
+   "title": "Mermaid Cake - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Handcrafted mermaid-themed cake with custom colours, flavours and dietary options. Hire in Laois, Kildare, Kilkenny, Tipperary, Offaly & Carlow from Castlemania. Call 089 415 6419 or book online."
+  }
+ ],
+ "categories": {
+  "bounce-and-slide": {
+   "h1": "Bounce &amp; Slide",
+   "intro": "",
+   "items": [
+    "bounce-and-slide/lego-movie-giant-combi.html",
+    "bounce-and-slide/avengers-giant-combi.html",
+    "bounce-and-slide/spiderman-bounce-and-slide.html"
+   ],
+   "title": "Bounce &amp; Slide - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Bounce & Slide equipment experts from Castlemania will help organise your event in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly. Contact us today!"
+  },
+  "bouncy-castles": {
+   "h1": "Bouncy Castles",
+   "intro": "",
+   "items": [
+    "bouncy-castles/paw-patrol-medium-combi.html",
+    "bouncy-castles/elsas-frozen-castle.html",
+    "bouncy-castles/lego-batman-combi.html",
+    "bouncy-castles/lego-friends-medium-combi.html",
+    "bouncy-castles/small-princess-bouncer.html"
+   ],
+   "title": "Bouncy Castles - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Bouncy Castles equipment experts from Castlemania will help organise your event in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly. Contact us today!"
+  },
+  "cakes-and-party-foods": {
+   "h1": "Cakes &amp; Party Foods",
+   "intro": "Custom themed cakes from &euro;65, sweet tables, party packages and our VIP Pamper Party. Availability is limited, so order in advance.",
+   "items": [
+    "cakes-and-party-foods/the-city-of-spiderman-cakes-selection.html",
+    "cakes-and-party-foods/queen-elsa-cake.html",
+    "cakes-and-party-foods/barbie-cake.html",
+    "cakes-and-party-foods/princess-party-cake.html",
+    "cakes-and-party-foods/sweet-treats-selection.html",
+    "cakes-and-party-foods/castle-and-cake-bundle.html",
+    "cakes-and-party-foods/vip-pamper-party.html"
+   ],
+   "title": "Cakes &amp; Party Foods - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Cakes & Party Foods equipment experts from Castlemania will help organise your event in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly. Contact us today!"
+  },
+  "giant-castles": {
+   "h1": "Giant Castles",
+   "intro": "Our biggest castles, with slides and a bounce area built in. These are our most hired units.",
+   "items": [
+    "giant-castles/barbie-dreamhouse-giant-combi.html",
+    "giant-castles/minecraft-obstacle-course.html",
+    "giant-castles/disney-princess-castle-giant-combi.html",
+    "giant-castles/lol-doll-house-giant-combi.html",
+    "giant-castles/toy-story-giant-combi.html",
+    "giant-castles/poppy-and-troll-gang-giant-combi.html",
+    "giant-castles/lightning-mcqueen-cars-giant-combi.html",
+    "giant-castles/spiderman-giant-combi.html",
+    "giant-castles/frozen-giant-combi.html",
+    "giant-castles/gru-and-the-minions-giant-combi.html",
+    "giant-castles/paw-patrol-giant-combi.html",
+    "giant-castles/rainbow-high-giant-combi.html",
+    "giant-castles/unicorn-giant-combi.html"
+   ],
+   "title": "Giant Castles - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Giant Castles equipment experts from Castlemania will help organise your event in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly. Contact us today!"
+  },
+  "giant-slides": {
+   "h1": "Giant Slides",
+   "intro": "",
+   "items": [
+    "giant-slides/the-giant-barbie-princess-with-double-slide.html",
+    "giant-slides/tropical-forest-slide.html",
+    "giant-slides/giant-candy-slide.html",
+    "giant-slides/giant-sonic-slide.html"
+   ],
+   "title": "Giant Slides - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Giant Slides equipment experts from Castlemania will help organise your event in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly. Contact us today!"
+  },
+  "new-inn": {
+   "h1": "New In!",
+   "intro": "Our newest units, fresh in and ready to book.",
+   "items": [
+    "giant-castles/gru-and-the-minions-giant-combi.html",
+    "giant-castles/paw-patrol-giant-combi.html",
+    "giant-castles/rainbow-high-giant-combi.html",
+    "bouncy-castles/paw-patrol-medium-combi.html"
+   ],
+   "title": "New In! - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "New In! equipment experts from Castlemania will help organise your event in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly. Contact us today!"
+  },
+  "some-of-our-castles": {
+   "h1": "Some of our Castles",
+   "intro": "",
+   "items": [
+    "giant-castles/barbie-dreamhouse-giant-combi.html",
+    "giant-castles/minecraft-obstacle-course.html",
+    "giant-castles/disney-princess-castle-giant-combi.html",
+    "giant-castles/lol-doll-house-giant-combi.html",
+    "giant-castles/toy-story-giant-combi.html",
+    "giant-castles/poppy-and-troll-gang-giant-combi.html",
+    "giant-castles/lightning-mcqueen-cars-giant-combi.html",
+    "giant-castles/spiderman-giant-combi.html",
+    "giant-castles/frozen-giant-combi.html",
+    "giant-castles/gru-and-the-minions-giant-combi.html",
+    "giant-castles/paw-patrol-giant-combi.html",
+    "giant-castles/rainbow-high-giant-combi.html",
+    "giant-castles/unicorn-giant-combi.html",
+    "bouncy-castles/paw-patrol-medium-combi.html",
+    "bouncy-castles/elsas-frozen-castle.html",
+    "bouncy-castles/lego-batman-combi.html",
+    "bouncy-castles/lego-friends-medium-combi.html",
+    "bouncy-castles/small-princess-bouncer.html",
+    "giant-slides/the-giant-barbie-princess-with-double-slide.html",
+    "giant-slides/tropical-forest-slide.html",
+    "giant-slides/giant-candy-slide.html",
+    "giant-slides/giant-sonic-slide.html",
+    "bounce-and-slide/lego-movie-giant-combi.html",
+    "bounce-and-slide/avengers-giant-combi.html",
+    "bounce-and-slide/spiderman-bounce-and-slide.html"
+   ],
+   "title": "Some of our Castles - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Some of our Castles equipment experts from Castlemania will help organise your event in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly. Contact us today!"
+  },
+  "sweet-treats": {
+   "h1": "Sweet Treats",
+   "intro": "A range of themed sweets and desserts, personalised to your party. Prices from &euro;4 a piece.",
+   "items": [
+    "sweet-treats/mermaid-cake.html"
+   ],
+   "title": "Sweet Treats - Bouncy Castle Hire in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly | Castlemania",
+   "meta": "Sweet Treats equipment experts from Castlemania will help organise your event in Mountrath, Portlaoise, Tipperary, Kilkenny, Kildare, Carlow, Offaly. Contact us today!"
+  }
+ }
+}
