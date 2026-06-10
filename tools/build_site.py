@@ -22,23 +22,24 @@ SITE = 'https://www.castlemaniabouncycastles.com/'
 def cdn_id(url):
     return url.rstrip('/').split('/')[-1] if url else None
 
-def img_url(image_id, w=640, h=480):
-    """Fixed-frame variant (smart crop): used only for uniform category nav tiles."""
-    return f'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_fill,g_auto,w_{w},h_{h}/{image_id}'
+# ---------- local self-hosted image variants (see tools/download_images.py) ----------
+def tile_src(p, prefix=''):
+    return f"{prefix}img/tiles/{p['slug']}.webp"
 
-def nat_url(image_id, w, h=None):
-    """Natural aspect ratio: never crops, never pads. Optional h bounds the fit box."""
-    dims = f'w_{w},h_{h}' if h else f'w_{w}'
-    return f'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,{dims}/{image_id}'
+def card_src(p, prefix=''):
+    return f"{prefix}img/cards/{p['slug']}.webp"
+
+def large_src(p, prefix=''):
+    return f"{prefix}img/large/{p['slug']}.webp"
 
 def fit_dims(iw, ih, maxw, maxh):
     s = min(maxw / iw, maxh / ih, 1)
     return round(iw * s), round(ih * s)
 
-def nat_img(p, w, attrs=''):
-    """<img> at the photo's own aspect ratio; width/height attrs reserve exact space (no CLS)."""
+def nat_img(p, w, attrs='', prefix=''):
+    """<img> at the photo's own aspect ratio; width/height attrs reserve exact space."""
     h = round(w * p['ih'] / p['iw'])
-    return f'<img src="{nat_url(p["img_id"], w)}" alt="{html.escape(p["name"])}" width="{w}" height="{h}"{attrs}>'
+    return f'<img src="{card_src(p, prefix)}" alt="{html.escape(p["name"])}" width="{w}" height="{h}"{attrs}>' 
 
 BY_SLUG = {}
 for p in PRODUCTS:
@@ -613,7 +614,7 @@ def prod_card(p, prefix, lazy=True, with_desc=True):
     price = p['specs'].get('Price', '')
     desc = f'<p class="desc">{p["desc"]}</p>' if with_desc else ''
     lz = ' loading="lazy"' if lazy else ' fetchpriority="high"'
-    return f"""<a href="{href}" class="prod rv">{nat_img(p, 640, lz)}<div class="prod-body"><h3>{html.escape(p['name'])}</h3>{desc}<div class="prod-foot"><div class="prod-price">{price}</div><span class="more">Details</span></div></div></a>"""
+    return f"""<a href="{href}" class="prod rv">{nat_img(p, 640, lz, prefix)}<div class="prod-body"><h3>{html.escape(p['name'])}</h3>{desc}<div class="prod-foot"><div class="prod-price">{price}</div><span class="more">Details</span></div></div></a>"""
 
 def includes_box():
     items = [
@@ -671,7 +672,7 @@ def build_home():
     for cdir in CAT_ORDER:
         meta = CAT_META[cdir]
         face = BY_SLUG[CAT_FACE[cdir]]
-        cat_cards.append(f"""<a href="category/{cdir}/" class="cat-card tint-{meta['color']} rv"><img src="{img_url(face['img_id'],560,420)}" alt="{CATS[cdir]['h1']}" width="560" height="420" loading="lazy"><span class="cat-name"><i class="ph-fill ph-{meta['icon']}"></i>{CATS[cdir]['h1']}</span><span class="cat-sub">{meta['blurb']}</span></a>""")
+        cat_cards.append(f"""<a href="category/{cdir}/" class="cat-card tint-{meta['color']} rv"><img src="{tile_src(face)}" alt="{CATS[cdir]['h1']}" width="560" height="420" loading="lazy"><span class="cat-name"><i class="ph-fill ph-{meta['icon']}"></i>{CATS[cdir]['h1']}</span><span class="cat-sub">{meta['blurb']}</span></a>""")
     cats_sec = f"""<section class="sec" id="categories">
   <div class="sec-head mid"><h2>Pick your party</h2><p>Castles, slides, combis, cakes and treats. Tap a category to see everything in it.</p></div>
   <div class="cat-grid">{''.join(cat_cards)}</div>
@@ -832,7 +833,7 @@ def build_products():
 </ul></div></div>"""
         body = f"""<div class="crumb"><a href="{prefix}index.html">Home</a> <span>/</span> <a href="index.html">{cat['h1']}</a> <span>/</span> <span>{html.escape(p['name'])}</span></div>
 <div class="pd">
-  <div class="pd-photo"><img src="{nat_url(p['img_id'],1200,900)}" alt="{html.escape(p['name'])}" width="{fit_dims(p['iw'],p['ih'],1200,900)[0]}" height="{fit_dims(p['iw'],p['ih'],1200,900)[1]}" fetchpriority="high"></div>
+  <div class="pd-photo"><img src="{large_src(p, prefix)}" alt="{html.escape(p['name'])}" width="{fit_dims(p['iw'],p['ih'],1200,900)[0]}" height="{fit_dims(p['iw'],p['ih'],1200,900)[1]}" fetchpriority="high"></div>
   <div class="pd-info">
     <h1>{html.escape(p['name'])}</h1>
     <div class="pd-price">{price}</div>
