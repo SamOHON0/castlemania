@@ -23,9 +23,6 @@ def cdn_id(url):
     return url.rstrip('/').split('/')[-1] if url else None
 
 # ---------- local self-hosted image variants (see tools/download_images.py) ----------
-def tile_src(p, prefix=''):
-    return f"{prefix}img/tiles/{p['slug']}.webp"
-
 def card_src(p, prefix=''):
     return f"{prefix}img/cards/{p['slug']}.webp"
 
@@ -235,10 +232,9 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 
 .collage{position:relative;min-height:460px}
 .snap{position:absolute;background:var(--white);border:3px solid var(--border);border-radius:var(--r);box-shadow:6px 6px 0 rgba(35,35,59,.9);overflow:hidden}
-.snap img{width:100%;height:100%;object-fit:cover}
+.snap img{width:100%;height:auto}
 .snap .cap{position:static;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-top:3px solid var(--border);background:var(--white);font-weight:800;font-size:14px}
 .snap .cap em{font-style:normal;color:var(--pink-deep);font-family:'Fredoka',sans-serif;font-size:16px;white-space:nowrap}
-.snap img{height:auto}
 .snap-a{width:60%;left:0;top:5%;transform:rotate(-2.5deg);z-index:2;display:flex;flex-direction:column}
 .snap-b{width:35%;right:0;top:0;transform:rotate(3deg);z-index:3}
 .snap-c{width:52%;left:9%;bottom:3%;transform:rotate(-3.5deg);z-index:4}
@@ -272,10 +268,10 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 .trust-item i{font-size:19px}
 
 /* ---------- category tiles ---------- */
-.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.cat-card{position:relative;border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);background:var(--white);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
+.cat-grid{columns:4;column-gap:22px}
+.cat-card{position:relative;break-inside:avoid;page-break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:22px;border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);background:var(--white);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
 .cat-card:hover{transform:translate(-2px,-4px) rotate(-.6deg);box-shadow:7px 8px 0 rgba(35,35,59,.9)}
-.cat-card img{aspect-ratio:4/3;width:100%;height:auto;object-fit:cover;border-bottom:3px solid var(--border)}
+.cat-card img{width:100%;height:auto;border-bottom:3px solid var(--border)}
 .cat-card .cat-name{display:flex;align-items:center;gap:10px;padding:14px 16px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px}
 .cat-card .cat-name i{font-size:21px}
 .cat-card .cat-sub{padding:0 16px 14px;font-size:13px;color:var(--gray)}
@@ -450,7 +446,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
 
 /* ---------- responsive ---------- */
 @media(max-width:1024px){
-  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{columns:2}
   .prod-grid,.grid-3{columns:2}
   .offers-grid{grid-template-columns:repeat(2,1fr)}
   .area-cols{grid-template-columns:repeat(2,1fr)}
@@ -484,7 +480,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
   .hero-btns{flex-direction:column;width:100%;gap:10px}
   .hero-btns .btn{width:100%;justify-content:center}
   .trust{padding:14px 16px;gap:10px 22px}.trust-item{font-size:13px}
-  .cat-grid,.offers-grid,.inc-row,.area-cols{grid-template-columns:1fr}
+  .offers-grid,.inc-row,.area-cols{grid-template-columns:1fr}
+  .cat-grid{columns:1}
   .prod-grid,.grid-3{columns:1}
   .sec-head h2{font-size:28px}
   .car-nav{display:none}
@@ -672,7 +669,8 @@ def build_home():
     for cdir in CAT_ORDER:
         meta = CAT_META[cdir]
         face = BY_SLUG[CAT_FACE[cdir]]
-        cat_cards.append(f"""<a href="category/{cdir}/" class="cat-card tint-{meta['color']} rv"><img src="{tile_src(face)}" alt="{CATS[cdir]['h1']}" width="560" height="420" loading="lazy"><span class="cat-name"><i class="ph-fill ph-{meta['icon']}"></i>{CATS[cdir]['h1']}</span><span class="cat-sub">{meta['blurb']}</span></a>""")
+        th = round(560 * face['ih'] / face['iw'])
+        cat_cards.append(f"""<a href="category/{cdir}/" class="cat-card tint-{meta['color']} rv"><img src="{card_src(face)}" alt="{CATS[cdir]['h1']}" width="560" height="{th}" loading="lazy"><span class="cat-name"><i class="ph-fill ph-{meta['icon']}"></i>{CATS[cdir]['h1']}</span><span class="cat-sub">{meta['blurb']}</span></a>""")
     cats_sec = f"""<section class="sec" id="categories">
   <div class="sec-head mid"><h2>Pick your party</h2><p>Castles, slides, combis, cakes and treats. Tap a category to see everything in it.</p></div>
   <div class="cat-grid">{''.join(cat_cards)}</div>
