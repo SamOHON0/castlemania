@@ -23,7 +23,22 @@ def cdn_id(url):
     return url.rstrip('/').split('/')[-1] if url else None
 
 def img_url(image_id, w=640, h=480):
-    return f'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_pad,b_auto,w_{w},h_{h}/{image_id}'
+    """Fixed-frame variant (smart crop): used only for uniform category nav tiles."""
+    return f'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_fill,g_auto,w_{w},h_{h}/{image_id}'
+
+def nat_url(image_id, w, h=None):
+    """Natural aspect ratio: never crops, never pads. Optional h bounds the fit box."""
+    dims = f'w_{w},h_{h}' if h else f'w_{w}'
+    return f'https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,{dims}/{image_id}'
+
+def fit_dims(iw, ih, maxw, maxh):
+    s = min(maxw / iw, maxh / ih, 1)
+    return round(iw * s), round(ih * s)
+
+def nat_img(p, w, attrs=''):
+    """<img> at the photo's own aspect ratio; width/height attrs reserve exact space (no CLS)."""
+    h = round(w * p['ih'] / p['iw'])
+    return f'<img src="{nat_url(p["img_id"], w)}" alt="{html.escape(p["name"])}" width="{w}" height="{h}"{attrs}>'
 
 BY_SLUG = {}
 for p in PRODUCTS:
@@ -222,12 +237,10 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 .snap img{width:100%;height:100%;object-fit:cover}
 .snap .cap{position:static;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-top:3px solid var(--border);background:var(--white);font-weight:800;font-size:14px}
 .snap .cap em{font-style:normal;color:var(--pink-deep);font-family:'Fredoka',sans-serif;font-size:16px;white-space:nowrap}
-.snap-a{width:62%;left:6%;top:4%;transform:rotate(-2.5deg);z-index:2;display:flex;flex-direction:column}
-.snap-a img{aspect-ratio:4/3}
-.snap-b{width:44%;right:0;top:0;transform:rotate(3deg);z-index:3}
-.snap-b img{aspect-ratio:1/1}
-.snap-c{width:40%;right:7%;bottom:2%;transform:rotate(-3.5deg);z-index:4}
-.snap-c img{aspect-ratio:4/3}
+.snap img{height:auto}
+.snap-a{width:60%;left:0;top:5%;transform:rotate(-2.5deg);z-index:2;display:flex;flex-direction:column}
+.snap-b{width:35%;right:0;top:0;transform:rotate(3deg);z-index:3}
+.snap-c{width:52%;left:9%;bottom:3%;transform:rotate(-3.5deg);z-index:4}
 @media(prefers-reduced-motion:no-preference){
 .snap-a{animation:bob 5s ease-in-out infinite}
 .snap-b{animation:bob 5s ease-in-out 1.2s infinite}
@@ -276,6 +289,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 .carousel{position:relative}
 .car-track{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 6px 18px;scrollbar-width:none}
 .car-track::-webkit-scrollbar{display:none}
+.car-track{align-items:flex-start}
 .car-track .prod{flex:0 0 286px;scroll-snap-align:start}
 .car-nav{position:absolute;top:-74px;right:0;display:flex;gap:10px}
 .car-btn{width:46px;height:46px;border-radius:50%;border:3px solid var(--border);background:var(--white);box-shadow:3px 3px 0 rgba(35,35,59,.9);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:transform .1s}
@@ -283,15 +297,17 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 .car-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 rgba(35,35,59,.9)}
 .prod{background:var(--white);border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
 .prod:hover{transform:translate(-2px,-4px);box-shadow:7px 8px 0 rgba(35,35,59,.9)}
-.prod img{aspect-ratio:4/3;width:100%;object-fit:cover;border-bottom:3px solid var(--border);background:var(--white)}
+.prod img{width:100%;height:auto;border-bottom:3px solid var(--border);background:var(--white)}
 .prod-body{padding:18px;display:flex;flex-direction:column;flex:1}
 .prod-body h3{font-size:17px;font-weight:600;margin-bottom:6px}
 .prod-body .desc{font-size:13.5px;color:var(--gray);line-height:1.55;margin-bottom:14px}
 .prod-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
 .prod-price{font-family:'Fredoka',sans-serif;font-size:21px;font-weight:600;color:var(--pink-deep)}
 .prod .more{font-size:13px;font-weight:800;color:var(--ink);background:var(--yellow-pale);border:2px solid var(--border);border-radius:50px;padding:5px 12px}
-.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.grid-3{grid-template-columns:repeat(3,1fr)}
+/* masonry: each card's frame matches its photo's own shape */
+.prod-grid{columns:4;column-gap:22px}
+.prod-grid .prod{break-inside:avoid;page-break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:22px}
+.grid-3{columns:3}
 .prod-grid .prod h3{min-height:0}
 .all-btn{text-align:center;margin-top:38px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
@@ -313,9 +329,9 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 /* ---------- packages ---------- */
 .pack{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:34px 0}
 .pack + .pack{border-top:3px dashed rgba(35,35,59,.25)}
-.pack-img{border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:6px 6px 0 rgba(35,35,59,.9);transform:rotate(-1.5deg)}
+.pack-img{border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:6px 6px 0 rgba(35,35,59,.9);transform:rotate(-1.5deg);width:fit-content;max-width:100%;justify-self:center}
 .pack:nth-child(even) .pack-img{transform:rotate(1.5deg)}
-.pack-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pack-img img{display:block;max-height:480px;width:auto;max-width:100%;height:auto}
 .pack-copy h3{font-size:clamp(24px,3vw,32px);margin-bottom:10px}
 .pack-copy p{font-size:16px;color:var(--gray);line-height:1.65;margin-bottom:16px;max-width:52ch}
 .pack-copy .price-line{font-family:'Fredoka',sans-serif;font-size:22px;color:var(--pink-deep);margin-bottom:18px}
@@ -394,8 +410,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
 
 /* ---------- product detail ---------- */
 .pd{max-width:1160px;margin:0 auto;padding:34px 40px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
-.pd-photo{border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:6px 6px 0 rgba(35,35,59,.9);transform:rotate(-1deg);background:var(--white)}
-.pd-photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pd-photo{border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:6px 6px 0 rgba(35,35,59,.9);transform:rotate(-1deg);background:var(--white);width:fit-content;max-width:100%;margin:0 auto}
+.pd-photo img{display:block;max-height:680px;width:auto;max-width:100%;height:auto}
 .pd-info h1{font-size:clamp(28px,3.6vw,42px);line-height:1.08;letter-spacing:-.5px;margin-bottom:12px}
 .pd-price{font-family:'Fredoka',sans-serif;font-size:28px;font-weight:600;color:var(--pink-deep);margin-bottom:16px}
 .pd-desc{font-size:16px;color:#3a3a4a;line-height:1.7;margin-bottom:10px}
@@ -434,7 +450,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
 /* ---------- responsive ---------- */
 @media(max-width:1024px){
   .cat-grid{grid-template-columns:repeat(2,1fr)}
-  .prod-grid{grid-template-columns:repeat(2,1fr)}
+  .prod-grid,.grid-3{columns:2}
   .offers-grid{grid-template-columns:repeat(2,1fr)}
   .area-cols{grid-template-columns:repeat(2,1fr)}
   .inc-row{grid-template-columns:repeat(2,1fr)}
@@ -443,10 +459,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
 @media(max-width:860px){
   .hero-in{grid-template-columns:1fr;padding:44px 24px 64px;gap:40px;text-align:center}
   .offer-chip{margin:0 auto}.hero-p{margin:0 auto}.hero-btns{justify-content:center}
-  .collage{min-height:0;height:auto;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-bottom:8px}
+  .collage{min-height:0;height:auto;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-bottom:8px;align-items:start}
   .snap{position:static;width:100%;transform:rotate(-1deg)}
   .snap-a{grid-column:1/-1;transform:rotate(-1deg)}
-  .snap-b img,.snap-c img{aspect-ratio:4/3}
   .snap .cap{font-size:12.5px;padding:8px 10px}
   .mascot{position:static;justify-content:center;margin-top:6px;grid-column:1/-1}
   .mascot .bubble{margin-bottom:24px}
@@ -468,7 +483,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
   .hero-btns{flex-direction:column;width:100%;gap:10px}
   .hero-btns .btn{width:100%;justify-content:center}
   .trust{padding:14px 16px;gap:10px 22px}.trust-item{font-size:13px}
-  .cat-grid,.prod-grid,.offers-grid,.inc-row,.area-cols{grid-template-columns:1fr}
+  .cat-grid,.offers-grid,.inc-row,.area-cols{grid-template-columns:1fr}
+  .prod-grid,.grid-3{columns:1}
   .sec-head h2{font-size:28px}
   .car-nav{display:none}
   .car-track .prod{flex-basis:82%}
@@ -597,7 +613,7 @@ def prod_card(p, prefix, lazy=True, with_desc=True):
     price = p['specs'].get('Price', '')
     desc = f'<p class="desc">{p["desc"]}</p>' if with_desc else ''
     lz = ' loading="lazy"' if lazy else ' fetchpriority="high"'
-    return f"""<a href="{href}" class="prod rv"><img src="{img_url(p['img_id'],640,480)}" alt="{html.escape(p['name'])}" width="640" height="480"{lz}><div class="prod-body"><h3>{html.escape(p['name'])}</h3>{desc}<div class="prod-foot"><div class="prod-price">{price}</div><span class="more">Details</span></div></div></a>"""
+    return f"""<a href="{href}" class="prod rv">{nat_img(p, 640, lz)}<div class="prod-body"><h3>{html.escape(p['name'])}</h3>{desc}<div class="prod-foot"><div class="prod-price">{price}</div><span class="more">Details</span></div></div></a>"""
 
 def includes_box():
     items = [
@@ -613,17 +629,17 @@ def includes_box():
 # HOME
 # =====================================================================
 def build_home():
-    a = BY_SLUG['barbie-dreamhouse-giant-combi']
-    b = BY_SLUG['disney-princess-castle-giant-combi']
-    c = BY_SLUG['giant-candy-slide']
+    a = BY_SLUG['barbie-dreamhouse-giant-combi']   # 960x464 panorama
+    b = BY_SLUG['giant-candy-slide']               # 3000x4000 portrait
+    c = BY_SLUG['disney-princess-castle-giant-combi']  # 2016x1134 wide
     collage = f"""
   <div class="collage" aria-hidden="false">
     <div class="balloon" style="left:-2%;top:32%;background:var(--sky)"></div>
-    <div class="balloon" style="right:-1%;top:46%;background:var(--green);animation-delay:1.6s"></div>
-    <div class="balloon" style="left:42%;top:-6%;background:var(--purple);animation-delay:3s"></div>
-    <a class="snap snap-a" href="{a['path']}"><img src="{img_url(a['img_id'],760,570)}" alt="{html.escape(a['name'])}" width="760" height="570" fetchpriority="high"><span class="cap">{html.escape(a['name'])}<em>From &euro;180</em></span></a>
-    <a class="snap snap-b" href="{b['path']}"><img src="{img_url(b['img_id'],460,460)}" alt="{html.escape(b['name'])}" width="460" height="460"></a>
-    <a class="snap snap-c" href="{c['path']}"><img src="{img_url(c['img_id'],460,345)}" alt="{html.escape(c['name'])}" width="460" height="345"></a>
+    <div class="balloon" style="right:-1%;top:58%;background:var(--green);animation-delay:1.6s"></div>
+    <div class="balloon" style="left:44%;top:-6%;background:var(--purple);animation-delay:3s"></div>
+    <a class="snap snap-a" href="{a['path']}">{nat_img(a, 700, ' fetchpriority="high"')}<span class="cap">{html.escape(a['name'])}<em>From &euro;180</em></span></a>
+    <a class="snap snap-b" href="{b['path']}">{nat_img(b, 420)}</a>
+    <a class="snap snap-c" href="{c['path']}">{nat_img(c, 640)}</a>
     <div class="mascot"><div class="face"><span>&#129332;</span></div><div class="bubble">Let's bounce!</div></div>
   </div>"""
     hero = f"""<header class="hero">
@@ -696,10 +712,10 @@ def build_home():
       </ul>
       <a href="{vip['path']}" class="btn btn-y">See the VIP package</a>
     </div>
-    <a class="pack-img" href="{vip['path']}"><img src="{img_url(vip['img_id'],760,570)}" alt="VIP Pamper Party" width="760" height="570" loading="lazy"></a>
+    <a class="pack-img" href="{vip['path']}">{nat_img(vip, 460, ' loading="lazy"')}</a>
   </div>
   <div class="pack rv">
-    <a class="pack-img" href="{bundle['path']}"><img src="{img_url(bundle['img_id'],760,570)}" alt="Castle &amp; Cake Bundle" width="760" height="570" loading="lazy"></a>
+    <a class="pack-img" href="{bundle['path']}">{nat_img(bundle, 460, ' loading="lazy"')}</a>
     <div class="pack-copy">
       <h3>Castle &amp; Cake Bundle</h3>
       <div class="price-line">12 themed cupcakes FREE</div>
@@ -816,7 +832,7 @@ def build_products():
 </ul></div></div>"""
         body = f"""<div class="crumb"><a href="{prefix}index.html">Home</a> <span>/</span> <a href="index.html">{cat['h1']}</a> <span>/</span> <span>{html.escape(p['name'])}</span></div>
 <div class="pd">
-  <div class="pd-photo"><img src="{img_url(p['img_id'],1000,750)}" alt="{html.escape(p['name'])}" width="1000" height="750" fetchpriority="high"></div>
+  <div class="pd-photo"><img src="{nat_url(p['img_id'],1200,900)}" alt="{html.escape(p['name'])}" width="{fit_dims(p['iw'],p['ih'],1200,900)[0]}" height="{fit_dims(p['iw'],p['ih'],1200,900)[1]}" fetchpriority="high"></div>
   <div class="pd-info">
     <h1>{html.escape(p['name'])}</h1>
     <div class="pd-price">{price}</div>
@@ -957,7 +973,6 @@ def write(rel, content):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
         f.write(content)
-    print('wrote', rel)
 
 if __name__ == '__main__':
     build_home()

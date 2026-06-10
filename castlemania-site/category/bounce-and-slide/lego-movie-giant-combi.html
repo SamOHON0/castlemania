@@ -108,12 +108,10 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 .snap img{width:100%;height:100%;object-fit:cover}
 .snap .cap{position:static;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-top:3px solid var(--border);background:var(--white);font-weight:800;font-size:14px}
 .snap .cap em{font-style:normal;color:var(--pink-deep);font-family:'Fredoka',sans-serif;font-size:16px;white-space:nowrap}
-.snap-a{width:62%;left:6%;top:4%;transform:rotate(-2.5deg);z-index:2;display:flex;flex-direction:column}
-.snap-a img{aspect-ratio:4/3}
-.snap-b{width:44%;right:0;top:0;transform:rotate(3deg);z-index:3}
-.snap-b img{aspect-ratio:1/1}
-.snap-c{width:40%;right:7%;bottom:2%;transform:rotate(-3.5deg);z-index:4}
-.snap-c img{aspect-ratio:4/3}
+.snap img{height:auto}
+.snap-a{width:60%;left:0;top:5%;transform:rotate(-2.5deg);z-index:2;display:flex;flex-direction:column}
+.snap-b{width:35%;right:0;top:0;transform:rotate(3deg);z-index:3}
+.snap-c{width:52%;left:9%;bottom:3%;transform:rotate(-3.5deg);z-index:4}
 @media(prefers-reduced-motion:no-preference){
 .snap-a{animation:bob 5s ease-in-out infinite}
 .snap-b{animation:bob 5s ease-in-out 1.2s infinite}
@@ -162,6 +160,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 .carousel{position:relative}
 .car-track{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 6px 18px;scrollbar-width:none}
 .car-track::-webkit-scrollbar{display:none}
+.car-track{align-items:flex-start}
 .car-track .prod{flex:0 0 286px;scroll-snap-align:start}
 .car-nav{position:absolute;top:-74px;right:0;display:flex;gap:10px}
 .car-btn{width:46px;height:46px;border-radius:50%;border:3px solid var(--border);background:var(--white);box-shadow:3px 3px 0 rgba(35,35,59,.9);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:transform .1s}
@@ -169,15 +168,17 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 .car-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 rgba(35,35,59,.9)}
 .prod{background:var(--white);border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
 .prod:hover{transform:translate(-2px,-4px);box-shadow:7px 8px 0 rgba(35,35,59,.9)}
-.prod img{aspect-ratio:4/3;width:100%;object-fit:cover;border-bottom:3px solid var(--border);background:var(--white)}
+.prod img{width:100%;height:auto;border-bottom:3px solid var(--border);background:var(--white)}
 .prod-body{padding:18px;display:flex;flex-direction:column;flex:1}
 .prod-body h3{font-size:17px;font-weight:600;margin-bottom:6px}
 .prod-body .desc{font-size:13.5px;color:var(--gray);line-height:1.55;margin-bottom:14px}
 .prod-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
 .prod-price{font-family:'Fredoka',sans-serif;font-size:21px;font-weight:600;color:var(--pink-deep)}
 .prod .more{font-size:13px;font-weight:800;color:var(--ink);background:var(--yellow-pale);border:2px solid var(--border);border-radius:50px;padding:5px 12px}
-.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.grid-3{grid-template-columns:repeat(3,1fr)}
+/* masonry: each card's frame matches its photo's own shape */
+.prod-grid{columns:4;column-gap:22px}
+.prod-grid .prod{break-inside:avoid;page-break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:22px}
+.grid-3{columns:3}
 .prod-grid .prod h3{min-height:0}
 .all-btn{text-align:center;margin-top:38px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
@@ -199,9 +200,9 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 /* ---------- packages ---------- */
 .pack{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:34px 0}
 .pack + .pack{border-top:3px dashed rgba(35,35,59,.25)}
-.pack-img{border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:6px 6px 0 rgba(35,35,59,.9);transform:rotate(-1.5deg)}
+.pack-img{border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:6px 6px 0 rgba(35,35,59,.9);transform:rotate(-1.5deg);width:fit-content;max-width:100%;justify-self:center}
 .pack:nth-child(even) .pack-img{transform:rotate(1.5deg)}
-.pack-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pack-img img{display:block;max-height:480px;width:auto;max-width:100%;height:auto}
 .pack-copy h3{font-size:clamp(24px,3vw,32px);margin-bottom:10px}
 .pack-copy p{font-size:16px;color:var(--gray);line-height:1.65;margin-bottom:16px;max-width:52ch}
 .pack-copy .price-line{font-family:'Fredoka',sans-serif;font-size:22px;color:var(--pink-deep);margin-bottom:18px}
@@ -280,8 +281,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
 
 /* ---------- product detail ---------- */
 .pd{max-width:1160px;margin:0 auto;padding:34px 40px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
-.pd-photo{border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:6px 6px 0 rgba(35,35,59,.9);transform:rotate(-1deg);background:var(--white)}
-.pd-photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pd-photo{border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:6px 6px 0 rgba(35,35,59,.9);transform:rotate(-1deg);background:var(--white);width:fit-content;max-width:100%;margin:0 auto}
+.pd-photo img{display:block;max-height:680px;width:auto;max-width:100%;height:auto}
 .pd-info h1{font-size:clamp(28px,3.6vw,42px);line-height:1.08;letter-spacing:-.5px;margin-bottom:12px}
 .pd-price{font-family:'Fredoka',sans-serif;font-size:28px;font-weight:600;color:var(--pink-deep);margin-bottom:16px}
 .pd-desc{font-size:16px;color:#3a3a4a;line-height:1.7;margin-bottom:10px}
@@ -320,7 +321,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
 /* ---------- responsive ---------- */
 @media(max-width:1024px){
   .cat-grid{grid-template-columns:repeat(2,1fr)}
-  .prod-grid{grid-template-columns:repeat(2,1fr)}
+  .prod-grid,.grid-3{columns:2}
   .offers-grid{grid-template-columns:repeat(2,1fr)}
   .area-cols{grid-template-columns:repeat(2,1fr)}
   .inc-row{grid-template-columns:repeat(2,1fr)}
@@ -329,10 +330,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
 @media(max-width:860px){
   .hero-in{grid-template-columns:1fr;padding:44px 24px 64px;gap:40px;text-align:center}
   .offer-chip{margin:0 auto}.hero-p{margin:0 auto}.hero-btns{justify-content:center}
-  .collage{min-height:0;height:auto;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-bottom:8px}
+  .collage{min-height:0;height:auto;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-bottom:8px;align-items:start}
   .snap{position:static;width:100%;transform:rotate(-1deg)}
   .snap-a{grid-column:1/-1;transform:rotate(-1deg)}
-  .snap-b img,.snap-c img{aspect-ratio:4/3}
   .snap .cap{font-size:12.5px;padding:8px 10px}
   .mascot{position:static;justify-content:center;margin-top:6px;grid-column:1/-1}
   .mascot .bubble{margin-bottom:24px}
@@ -354,7 +354,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
   .hero-btns{flex-direction:column;width:100%;gap:10px}
   .hero-btns .btn{width:100%;justify-content:center}
   .trust{padding:14px 16px;gap:10px 22px}.trust-item{font-size:13px}
-  .cat-grid,.prod-grid,.offers-grid,.inc-row,.area-cols{grid-template-columns:1fr}
+  .cat-grid,.offers-grid,.inc-row,.area-cols{grid-template-columns:1fr}
+  .prod-grid,.grid-3{columns:1}
   .sec-head h2{font-size:28px}
   .car-nav{display:none}
   .car-track .prod{flex-basis:82%}
@@ -380,7 +381,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
 <div class="mob-menu" id="mobMenu"><a href="../../index.html">Home</a><a class="mob-sub" href="../../category/some-of-our-castles/">Some of our Castles</a><a class="mob-sub" href="../../category/giant-castles/">Giant Castles</a><a class="mob-sub" href="../../category/bouncy-castles/">Bouncy Castles</a><a class="mob-sub" href="../../category/giant-slides/">Giant Slides</a><a class="mob-sub" href="../../category/bounce-and-slide/">Bounce &amp; Slide</a><a class="mob-sub" href="../../category/cakes-and-party-foods/">Cakes &amp; Party Foods</a><a class="mob-sub" href="../../category/sweet-treats/">Sweet Treats</a><a class="mob-sub" href="../../category/new-inn/">New In!</a><a href="../../pages/about-us.html">About Us</a><a href="../../pages/testimonials.html">Testimonials</a><a href="../../news/index.html">News</a><a href="../../pages/contact-castlemania.html">Contact Us</a><a href="../../book.html">Book Now</a><a href="tel:0894156419">Call 089 415 6419</a></div>
 <div class="crumb"><a href="../../index.html">Home</a> <span>/</span> <a href="index.html">Bounce &amp; Slide</a> <span>/</span> <span>Lego Movie Giant Combi</span></div>
 <div class="pd">
-  <div class="pd-photo"><img src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_pad,b_auto,w_1000,h_750/ed4d79a92cc50c85456cba640b296f5b" alt="Lego Movie Giant Combi" width="1000" height="750" fetchpriority="high"></div>
+  <div class="pd-photo"><img src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_1200,h_900/ed4d79a92cc50c85456cba640b296f5b" alt="Lego Movie Giant Combi" width="675" height="900" fetchpriority="high"></div>
   <div class="pd-info">
     <h1>Lego Movie Giant Combi</h1>
     <div class="pd-price">From €150</div>
@@ -396,7 +397,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
   </div>
 </div>
 <div class="pd-includes rv"><div class="inc-box"><h2>Every hire includes</h2><ul><li><i class="ph-fill ph-check-circle"></i>A sanitised castle, delivered clean and ready to use</li><li><i class="ph-fill ph-check-circle"></i>Setup with safety mats and stakes, everything secured</li><li><i class="ph-fill ph-check-circle"></i>Rain covers on select models</li><li><i class="ph-fill ph-check-circle"></i>Collection after your event, no hassle</li></ul></div></div>
-<section class="sec"><div class="sec-head"><h2>You might also like</h2></div><div class="prod-grid grid-3"><a href="../../category/bounce-and-slide/avengers-giant-combi.html" class="prod rv"><img src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_pad,b_auto,w_640,h_480/8262bbdeee886145ac9b182bf9c902a5" alt="Avengers Giant Combi" width="640" height="480" loading="lazy"><div class="prod-body"><h3>Avengers Giant Combi</h3><div class="prod-foot"><div class="prod-price">From €150</div><span class="more">Details</span></div></div></a><a href="../../category/bounce-and-slide/spiderman-bounce-and-slide.html" class="prod rv"><img src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_pad,b_auto,w_640,h_480/81adca2f64d2ec03999fd700b5a4584a" alt="Spiderman Bounce &amp; Slide" width="640" height="480" loading="lazy"><div class="prod-body"><h3>Spiderman Bounce &amp; Slide</h3><div class="prod-foot"><div class="prod-price">From €140</div><span class="more">Details</span></div></div></a></div>
+<section class="sec"><div class="sec-head"><h2>You might also like</h2></div><div class="prod-grid grid-3"><a href="../../category/bounce-and-slide/avengers-giant-combi.html" class="prod rv"><img src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_640/8262bbdeee886145ac9b182bf9c902a5" alt="Avengers Giant Combi" width="640" height="853" loading="lazy"><div class="prod-body"><h3>Avengers Giant Combi</h3><div class="prod-foot"><div class="prod-price">From €150</div><span class="more">Details</span></div></div></a><a href="../../category/bounce-and-slide/spiderman-bounce-and-slide.html" class="prod rv"><img src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_640/81adca2f64d2ec03999fd700b5a4584a" alt="Spiderman Bounce &amp; Slide" width="640" height="360" loading="lazy"><div class="prod-body"><h3>Spiderman Bounce &amp; Slide</h3><div class="prod-foot"><div class="prod-price">From €140</div><span class="more">Details</span></div></div></a></div>
 <div class="all-btn"><a href="../../category/bounce-and-slide/" class="btn btn-w">Back to Bounce &amp; Slide</a><a href="../../book.html" class="btn btn-p">Book online</a></div></section>
 <footer>
   <div class="ft-rainbow"></div>
