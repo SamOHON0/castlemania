@@ -63,13 +63,13 @@ CAT_META = {
 }
 CAT_FACE = {  # representative photo per category (slug of product whose image we use)
     'some-of-our-castles': 'disney-princess-castle-giant-combi',
-    'giant-castles': 'barbie-dreamhouse-giant-combi',
+    'giant-castles': 'lightning-mcqueen-cars-giant-combi',
     'bouncy-castles': 'elsas-frozen-castle',
-    'giant-slides': 'giant-candy-slide',
-    'bounce-and-slide': 'avengers-giant-combi',
+    'giant-slides': 'giant-sonic-slide',
+    'bounce-and-slide': 'spiderman-bounce-and-slide',
     'cakes-and-party-foods': 'queen-elsa-cake',
     'sweet-treats': 'mermaid-cake',
-    'new-inn': 'gru-and-the-minions-giant-combi',
+    'new-inn': 'rainbow-high-giant-combi',
 }
 
 # ---------- detailed descriptions (Dana asked for these) ----------
@@ -268,13 +268,16 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 .trust-item i{font-size:19px}
 
 /* ---------- category tiles ---------- */
-.cat-grid{columns:4;column-gap:22px}
-.cat-card{position:relative;break-inside:avoid;page-break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:22px;border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);background:var(--white);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.cat-card{position:relative;border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);background:var(--white);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
 .cat-card:hover{transform:translate(-2px,-4px) rotate(-.6deg);box-shadow:7px 8px 0 rgba(35,35,59,.9)}
-.cat-card img{width:100%;height:auto;border-bottom:3px solid var(--border)}
+.cat-card img{aspect-ratio:4/3;width:100%;height:auto;object-fit:contain;padding:8px;border-bottom:3px solid var(--border)}
 .cat-card .cat-name{display:flex;align-items:center;gap:10px;padding:14px 16px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px}
 .cat-card .cat-name i{font-size:21px}
 .cat-card .cat-sub{padding:0 16px 14px;font-size:13px;color:var(--gray)}
+.tint-pink img{background:var(--pink-pale)}.tint-yellow img{background:var(--yellow-pale)}
+.tint-sky img{background:var(--sky-pale)}.tint-green img{background:var(--green-pale)}
+.tint-orange img{background:var(--orange-pale)}.tint-purple img{background:var(--purple-pale)}
 .tint-pink .cat-name{background:var(--pink-pale)}.tint-yellow .cat-name{background:var(--yellow-pale)}
 .tint-sky .cat-name{background:var(--sky-pale)}.tint-green .cat-name{background:var(--green-pale)}
 .tint-orange .cat-name{background:var(--orange-pale)}.tint-purple .cat-name{background:var(--purple-pale)}
@@ -294,17 +297,15 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 .car-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 rgba(35,35,59,.9)}
 .prod{background:var(--white);border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
 .prod:hover{transform:translate(-2px,-4px);box-shadow:7px 8px 0 rgba(35,35,59,.9)}
-.prod img{width:100%;height:auto;border-bottom:3px solid var(--border);background:var(--white)}
+.prod img{aspect-ratio:4/3;width:100%;height:auto;object-fit:contain;padding:8px;background:var(--cream);border-bottom:3px solid var(--border)}
 .prod-body{padding:18px;display:flex;flex-direction:column;flex:1}
 .prod-body h3{font-size:17px;font-weight:600;margin-bottom:6px}
 .prod-body .desc{font-size:13.5px;color:var(--gray);line-height:1.55;margin-bottom:14px}
 .prod-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
 .prod-price{font-family:'Fredoka',sans-serif;font-size:21px;font-weight:600;color:var(--pink-deep)}
 .prod .more{font-size:13px;font-weight:800;color:var(--ink);background:var(--yellow-pale);border:2px solid var(--border);border-radius:50px;padding:5px 12px}
-/* masonry: each card's frame matches its photo's own shape */
-.prod-grid{columns:4;column-gap:22px}
-.prod-grid .prod{break-inside:avoid;page-break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:22px}
-.grid-3{columns:3}
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
 .prod-grid .prod h3{min-height:0}
 .all-btn{text-align:center;margin-top:38px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
@@ -446,8 +447,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
 
 /* ---------- responsive ---------- */
 @media(max-width:1024px){
-  .cat-grid{columns:2}
-  .prod-grid,.grid-3{columns:2}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .prod-grid,.grid-3{grid-template-columns:repeat(2,1fr)}
   .offers-grid{grid-template-columns:repeat(2,1fr)}
   .area-cols{grid-template-columns:repeat(2,1fr)}
   .inc-row{grid-template-columns:repeat(2,1fr)}
@@ -480,9 +481,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);padding:0 40px 32px}
   .hero-btns{flex-direction:column;width:100%;gap:10px}
   .hero-btns .btn{width:100%;justify-content:center}
   .trust{padding:14px 16px;gap:10px 22px}.trust-item{font-size:13px}
-  .offers-grid,.inc-row,.area-cols{grid-template-columns:1fr}
-  .cat-grid{columns:1}
-  .prod-grid,.grid-3{columns:1}
+  .cat-grid,.offers-grid,.inc-row,.area-cols{grid-template-columns:1fr}
+  .prod-grid,.grid-3{grid-template-columns:1fr}
   .sec-head h2{font-size:28px}
   .car-nav{display:none}
   .car-track .prod{flex-basis:82%}
