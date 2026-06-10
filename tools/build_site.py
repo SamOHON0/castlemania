@@ -274,7 +274,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px 
 .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .cat-card{position:relative;border:3px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);background:var(--white);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
 .cat-card:hover{transform:translate(-2px,-4px) rotate(-.6deg);box-shadow:7px 8px 0 rgba(35,35,59,.9)}
-.cat-card img{aspect-ratio:4/3;width:100%;object-fit:cover;border-bottom:3px solid var(--border)}
+.cat-card img{aspect-ratio:4/3;width:100%;height:auto;object-fit:cover;border-bottom:3px solid var(--border)}
 .cat-card .cat-name{display:flex;align-items:center;gap:10px;padding:14px 16px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px}
 .cat-card .cat-name i{font-size:21px}
 .cat-card .cat-sub{padding:0 16px 14px;font-size:13px;color:var(--gray)}
