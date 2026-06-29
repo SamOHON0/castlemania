@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Castlemania - Uniform Grid Test</title>
+<style>
+  :root{ --purple:#7c3aed; --pink:#f472b6; --teal:#14b8a6; --yellow:#ffd166; --ink:#241047; }
+  *{box-sizing:border-box}
+  body{font-family:system-ui,Segoe UI,Roboto,sans-serif;margin:0;background:#fff7ec;color:var(--ink)}
+  header{text-align:center;padding:36px 16px 8px}
+  h1{font-size:clamp(28px,5vw,46px);margin:0;letter-spacing:.5px}
+  p.sub{color:#6b5b8a;margin:8px 0 0}
+  .legend{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:18px 0 6px;font-size:13px;font-weight:600}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:12px;height:12px;border-radius:3px;display:inline-block}
+  .grid{max-width:1180px;margin:18px auto 60px;padding:0 16px;
+        display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 0 rgba(124,58,237,.18),0 10px 24px rgba(0,0,0,.08)}
+  .thumb{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#eee}
+  .body{padding:12px 14px}
+  .cat{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--teal);font-weight:700}
+  .name{font-size:15px;font-weight:700;margin-top:2px;line-height:1.25}
+  .tag{display:inline-block;margin-top:8px;font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px}
+  .t-new{background:#ecfdf5;color:#047857}
+  .t-ph{background:#f5f3ff;color:var(--purple)}
+  .t-keep{background:#fff7ed;color:#b45309}
+</style>
+</head>
+<body>
+<header>
+  <h1>Uniform Card Grid — Test</h1>
+  <p class="sub">All cards forced to one 4:3 landscape shape. Castles fully visible (fit + blurred fill, no cropping).</p>
+  <div class="legend">
+    <span><i class="dot" style="background:#10b981"></i> New high-res photo</span>
+    <span><i class="dot" style="background:#7c3aed"></i> Placeholder (you'll choose)</span>
+    <span><i class="dot" style="background:#f59e0b"></i> Existing image kept</span>
+  </div>
+</header>
+<div class="grid" id="grid"></div>
+<script>
+const NEW=["elsas-frozen-castle","frozen-giant-combi","giant-sonic-slide","spiderman-bounce-and-slide","the-giant-barbie-princess-with-double-slide","toy-story-giant-combi"];
+const KEEP=["barbie-cake","mermaid-cake","princess-party-cake","queen-elsa-cake","the-city-of-spiderman-cakes-selection","sweet-treats-selection","vip-pamper-party","castle-and-cake-bundle"];
+const items=[
+["barbie-dreamhouse-giant-combi","Barbie Dreamhouse Giant Combi","Giant Castles"],
+["minecraft-obstacle-course","Minecraft Obstacle Course","Giant Castles"],
+["disney-princess-castle-giant-combi","Disney Princess Castle Giant Combi","Giant Castles"],
+["lol-doll-house-giant-combi","L.O.L Doll House Giant Combi","Giant Castles"],
+["toy-story-giant-combi","Toy Story Giant Combi","Giant Castles"],
+["poppy-and-troll-gang-giant-combi","Poppy and Troll Gang Giant Combi","Giant Castles"],
+["lightning-mcqueen-cars-giant-combi","Lightning McQueen / Cars Giant Combi","Giant Castles"],
+["spiderman-giant-combi","Spiderman Giant Combi","Giant Castles"],
+["frozen-giant-combi","Frozen Giant Combi","Giant Castles"],
+["gru-and-the-minions-giant-combi","Gru & The Minions Giant Combi","Giant Castles"],
+["paw-patrol-giant-combi","Paw Patrol Giant Combi","Giant Castles"],
+["rainbow-high-giant-combi","Rainbow High Giant Combi","Giant Castles"],
+["unicorn-giant-combi","Unicorn Giant Combi","Giant Castles"],
+["paw-patrol-medium-combi","Paw Patrol Medium Combi","Bouncy Castles"],
+["elsas-frozen-castle","Elsas Frozen Castle","Bouncy Castles"],
+["lego-batman-combi","Lego Batman Combi","Bouncy Castles"],
+["lego-friends-medium-combi","Lego Friends Medium Combi","Bouncy Castles"],
+["small-princess-bouncer","Small Princess Bouncer","Bouncy Castles"],
+["the-giant-barbie-princess-with-double-slide","The Giant Barbie Princess with Double Slide","Giant Slides"],
+["tropical-forest-slide","Tropical Forest Slide","Giant Slides"],
+["giant-candy-slide","Giant Candy Slide","Giant Slides"],
+["giant-sonic-slide","Giant Sonic Slide","Giant Slides"],
+["lego-movie-giant-combi","Lego Movie Giant Combi","Bounce & Slide"],
+["avengers-giant-combi","Avengers Giant Combi","Bounce & Slide"],
+["spiderman-bounce-and-slide","Spiderman Bounce & Slide","Bounce & Slide"],
+["the-city-of-spiderman-cakes-selection","The City of Spiderman Cakes Selection","Cakes & Party Foods"],
+["queen-elsa-cake","Queen Elsa Cake","Cakes & Party Foods"],
+["barbie-cake","Barbie Cake","Cakes & Party Foods"],
+["princess-party-cake","Princess Party Cake","Cakes & Party Foods"],
+["sweet-treats-selection","Sweet Treats Selection","Cakes & Party Foods"],
+["mermaid-cake","Mermaid Cake","Sweet Treats"],
+["vip-pamper-party","VIP Pamper Party","Cakes & Party Foods"],
+["castle-and-cake-bundle","Castle & Cake Bundle","Cakes & Party Foods"]
+];
+const g=document.getElementById("grid");
+items.forEach(([slug,name,cat])=>{
+  let tag='<span class="tag t-keep">existing kept</span>';
+  if(NEW.includes(slug)) tag='<span class="tag t-new">new high-res</span>';
+  else if(!KEEP.includes(slug)) tag='<span class="tag t-ph">placeholder</span>';
+  g.insertAdjacentHTML("beforeend",
+   `<div class="card"><img class="thumb" loading="lazy" src="cards/${slug}.webp" alt="${name}">
+    <div class="body"><div class="cat">${cat}</div><div class="name">${name}</div>${tag}</div></div>`);
+});
+</script>
+</body>
+</html>
