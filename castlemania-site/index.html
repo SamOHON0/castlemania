@@ -652,4 +652,43 @@ body::after{display:none!important}
   <div class="ft-inner">
     <div class="ft-brand"><div class="ft-logo"><img src="https://www.castlemaniabouncycastles.com/theme/castlemania-logo@1x.png" alt="Castlemania Bouncy Castle Hire" style="height:56px;width:auto"></div>
     <p>Bouncy castle hire in Laois, Kildare, Kilkenny, Tipperary, Offaly and Carlow. Family-run from Mountrath, Co. Laois since 2018.</p></div>
-    <div class="ft-col"><h4>Products</h4><ul><li><a href="category/some-of-our-castles/">Some of our Castles</a></li><li><a href="category/giant-castles/">Giant Castles</a></li><li><a href="category/bouncy-castles/">Bouncy Castles</a></li><li><a href="category/giant-slides/">Giant Slides</a></li><li><a href="category/bounce-and-slide/">Bounce &amp; Slide</a></li><li><a href="category/cakes-and-party-foods/">Cakes &amp; 
+    <div class="ft-col"><h4>Products</h4><ul><li><a href="category/some-of-our-castles/">Some of our Castles</a></li><li><a href="category/giant-castles/">Giant Castles</a></li><li><a href="category/bouncy-castles/">Bouncy Castles</a></li><li><a href="category/giant-slides/">Giant Slides</a></li><li><a href="category/bounce-and-slide/">Bounce &amp; Slide</a></li><li><a href="category/cakes-and-party-foods/">Cakes &amp; Party Foods</a></li><li><a href="category/sweet-treats/">Sweet Treats</a></li><li><a href="category/new-inn/">New In!</a></li></ul></div>
+    <div class="ft-col"><h4>Pages</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="book.html">Book Now</a></li>
+      <li><a href="pages/about-us.html">About Us</a></li>
+      <li><a href="pages/testimonials.html">Testimonials</a></li>
+      <li><a href="news/index.html">News</a></li>
+      <li><a href="pages/contact-castlemania.html">Contact Us</a></li>
+      <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+    </ul></div>
+    <div class="ft-col"><h4>Get in Touch</h4><ul>
+      <li><a href="tel:0894156419">089 415 6419</a></li>
+      <li><a href="mailto:info@castlemaniabouncycastles.com">info@castlemaniabouncycastles.com</a></li>
+      <li><a href="https://www.facebook.com/Castlemania-105465194348441" target="_blank" rel="noopener">Facebook</a></li>
+    </ul></div>
+  </div>
+  <div class="ft-bottom"><span>&copy; 2026 Castlemania. All rights reserved.</span><span>Mountrath, Co. Laois</span></div>
+</footer>
+<div class="fab-wrap">
+  <a href="https://wa.me/353894156419?text=Hi%20Castlemania%2C%20I%27d%20like%20to%20enquire%20about%20booking%20a%20bouncy%20castle." target="_blank" rel="noopener" class="fab fab-wa" title="WhatsApp us" aria-label="WhatsApp us"><i class="ph-fill ph-whatsapp-logo"></i></a>
+  <a href="tel:0894156419" class="fab fab-phone" title="Call us" aria-label="Call us"><i class="ph-fill ph-phone"></i></a>
+</div>
+<script>
+function toggleMenu(){document.querySelector('.burger').classList.toggle('open');document.getElementById('mobMenu').classList.toggle('open')}
+document.querySelectorAll('.mob-menu a').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.burger').classList.remove('open');document.getElementById('mobMenu').classList.remove('open')}));
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  els.forEach(function(e){io.observe(e)});
+})();
+document.querySelectorAll('.carousel').forEach(function(c){
+  var t=c.querySelector('.car-track');
+  c.querySelectorAll('.car-btn').forEach(function(b){
+    b.addEventListener('click',function(){t.scrollBy({left:(b.dataset.dir==='next'?1:-1)*(t.clientWidth*0.8),behavior:'smooth'})});
+  });
+});
+</script>
+</body>
+</html>
