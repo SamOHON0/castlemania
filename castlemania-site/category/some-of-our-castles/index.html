@@ -485,7 +485,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:0 24px 28px;posi
 /* tone down busy background pattern */
 body::after{display:none!important}
 /* solid (no dashed) accents */
-.btn-w,.offer-chip,.sec-tag,.pack + .pack{border-style:solid!important}
+.btn-w,.offer-chip,.sec-tag{border-style:solid!important}
+.pack + .pack{border:0!important;border-top:1px solid var(--line)!important}
 /* bigger nav logo */
 .logo-img{height:66px!important}
 @media(max-width:560px){.logo-img{height:48px!important}}

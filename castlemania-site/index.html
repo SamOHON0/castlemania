@@ -485,7 +485,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:0 24px 28px;posi
 /* tone down busy background pattern */
 body::after{display:none!important}
 /* solid (no dashed) accents */
-.btn-w,.offer-chip,.sec-tag,.pack + .pack{border-style:solid!important}
+.btn-w,.offer-chip,.sec-tag{border-style:solid!important}
+.pack + .pack{border:0!important;border-top:1px solid var(--line)!important}
 /* bigger nav logo */
 .logo-img{height:66px!important}
 @media(max-width:560px){.logo-img{height:48px!important}}
@@ -506,6 +507,11 @@ body::after{display:none!important}
 .hero-bleed .offer-chip{background:rgba(255,255,255,.95);color:var(--ink)}
 .hero-bleed .hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:6px}
 @media(max-width:560px){.hero-logo{height:104px;padding:12px 20px}.hero-content{padding:120px 18px 72px}}
+/* hero floating balloons */
+.hero-bleed .hero-balloons{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.hero-bleed .balloon{width:46px;height:58px;opacity:.92}
+.hero-bleed .balloon::after{height:70px}
+@media(max-width:560px){.hero-bleed .balloon{display:none}}
 /* ===== END RESTYLE ===== */
 
 </style>
@@ -520,6 +526,14 @@ body::after{display:none!important}
 <div class="mob-menu" id="mobMenu"><a href="index.html">Home</a><a class="mob-sub" href="category/some-of-our-castles/">Some of our Castles</a><a class="mob-sub" href="category/giant-castles/">Giant Castles</a><a class="mob-sub" href="category/bouncy-castles/">Bouncy Castles</a><a class="mob-sub" href="category/giant-slides/">Giant Slides</a><a class="mob-sub" href="category/bounce-and-slide/">Bounce &amp; Slide</a><a class="mob-sub" href="category/cakes-and-party-foods/">Cakes &amp; Party Foods</a><a class="mob-sub" href="category/sweet-treats/">Sweet Treats</a><a class="mob-sub" href="category/new-inn/">New In!</a><a href="pages/about-us.html">About Us</a><a href="pages/testimonials.html">Testimonials</a><a href="news/index.html">News</a><a href="pages/contact-castlemania.html">Contact Us</a><a href="book.html">Book Now</a><a href="tel:0894156419">Call 089 415 6419</a></div>
 <header class="hero hero-bleed">
   <div class="hero-overlay"></div>
+  <div class="hero-balloons" aria-hidden="true">
+    <span class="balloon" style="left:6%;top:30%;background:var(--pink);animation-delay:0s"></span>
+    <span class="balloon" style="left:15%;top:58%;background:var(--yellow);animation-delay:1.2s"></span>
+    <span class="balloon" style="right:8%;top:26%;background:var(--sky);animation-delay:.6s"></span>
+    <span class="balloon" style="right:16%;top:60%;background:var(--green);animation-delay:2.1s"></span>
+    <span class="balloon" style="left:32%;top:14%;background:var(--purple);animation-delay:1.7s"></span>
+    <span class="balloon" style="right:30%;top:12%;background:var(--orange);animation-delay:2.6s"></span>
+  </div>
   <div class="hero-content">
     <img class="hero-logo" src="https://www.castlemaniabouncycastles.com/theme/castlemania-logo@1x.png" alt="Castlemania Bouncy Castle Hire">
     <span class="offer-chip"><i class="ph-bold ph-sun"></i> Summer offer: 2nd day &euro;30, 3rd day FREE</span>
