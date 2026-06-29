@@ -492,7 +492,11 @@ body::after{display:none!important}
 @media(max-width:560px){.logo-img{height:48px!important}}
 /* ===== FULL-BLEED PHOTO HERO ===== */
 .hero-bleed{position:relative;min-height:90vh;display:flex;align-items:center;justify-content:center;
-  text-align:center;background:#1A1330 url(img/hero.webp) center 35%/cover no-repeat;overflow:hidden;margin-top:-72px}
+  text-align:center;background:#1A1330;overflow:hidden;margin-top:-72px}
+.hero-slide{position:absolute;inset:0;z-index:0;background-position:center 35%;background-size:cover;
+  background-repeat:no-repeat;opacity:0;animation:heroFade 18s ease-in-out infinite}
+@keyframes heroFade{0%{opacity:0}3%{opacity:1}30%{opacity:1}36%{opacity:0}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.hero-slide{animation:none}.hero-slide:first-child{opacity:1}}
 .hero-bleed .hero-overlay{position:absolute;inset:0;z-index:1;
   background:linear-gradient(180deg,rgba(26,19,48,.62) 0%,rgba(26,19,48,.30) 38%,rgba(26,19,48,.78) 100%)}
 .hero-content{position:relative;z-index:2;max-width:880px;padding:150px 24px 96px;
@@ -525,6 +529,9 @@ body::after{display:none!important}
 </nav>
 <div class="mob-menu" id="mobMenu"><a href="index.html">Home</a><a class="mob-sub" href="category/some-of-our-castles/">Some of our Castles</a><a class="mob-sub" href="category/giant-castles/">Giant Castles</a><a class="mob-sub" href="category/bouncy-castles/">Bouncy Castles</a><a class="mob-sub" href="category/giant-slides/">Giant Slides</a><a class="mob-sub" href="category/bounce-and-slide/">Bounce &amp; Slide</a><a class="mob-sub" href="category/cakes-and-party-foods/">Cakes &amp; Party Foods</a><a class="mob-sub" href="category/sweet-treats/">Sweet Treats</a><a class="mob-sub" href="category/new-inn/">New In!</a><a href="pages/about-us.html">About Us</a><a href="pages/testimonials.html">Testimonials</a><a href="news/index.html">News</a><a href="pages/contact-castlemania.html">Contact Us</a><a href="book.html">Book Now</a><a href="tel:0894156419">Call 089 415 6419</a></div>
 <header class="hero hero-bleed">
+  <div class="hero-slide" style="background-image:url(img/hero1.webp);animation-delay:0s"></div>
+  <div class="hero-slide" style="background-image:url(img/hero2.webp);animation-delay:6s"></div>
+  <div class="hero-slide" style="background-image:url(img/hero3.webp);animation-delay:12s"></div>
   <div class="hero-overlay"></div>
   <div class="hero-balloons" aria-hidden="true">
     <span class="balloon" style="left:6%;top:30%;background:var(--pink);animation-delay:0s"></span>
