@@ -455,6 +455,59 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:0 24px 28px;posi
   .pd-includes ul{grid-template-columns:1fr}
   .fab-wrap{bottom:16px;right:16px}.fab{width:54px;height:54px;font-size:24px}
 }
+
+/* ===== UNIFORM RESTYLE OVERRIDES (calm + thin borders) ===== */
+:root{--line:rgba(26,19,48,.14);--soft:0 6px 18px rgba(26,19,48,.10)}
+/* thin uniform borders */
+.snap,.cat-card,.prod,.ticket,.rev,.inc,.pack-img,.pd-photo,.drop,.nav-btn,.btn-y,.btn-w,.car-btn,
+.chips span,.spec-chips span,.tk-icon,.inc i,.rev-av,.offer-chip,.sec-tag,.mq-logo,.mascot .face,
+.mascot .bubble,.balloon,.cta,.cta-logo,.ft-logo,.ft-brand .ft-logo,.logo-img,nav{
+  border-width:1px!important;border-style:solid!important;border-color:var(--line)!important}
+/* one soft shadow, no hard offsets */
+.snap,.cat-card,.prod,.ticket,.rev,.inc,.pack-img,.pd-photo,.drop,.car-btn,.cta,.cta-logo,
+.chips span,.spec-chips span,.nav-btn,.btn-y,.btn-w,.logo-img,.offer-chip,.mascot .face,
+.mascot .bubble,nav,.tk-icon,.inc i,.rev-av{box-shadow:var(--soft)!important}
+.btn-p{box-shadow:0 8px 22px rgba(255,46,147,.35)!important;border-width:2px!important}
+.cta{box-shadow:0 14px 40px rgba(26,19,48,.18)!important}
+/* kill tilts + stagger */
+.cat-card,.prod,.ticket,.rev,.pack-img,.pd-photo,.price-line,.pd-price,.tk-tag,.badge,.cta-logo,
+.snap-a,.snap-b,.snap-c{transform:none!important}
+.cat-card:hover,.prod:hover,.ticket:hover,.rev:hover{transform:translateY(-4px)!important}
+.prod-grid .prod:nth-child(even){transform:none!important}
+.prod-grid .prod:nth-child(even):hover{transform:translateY(-4px)!important}
+.chips span:hover{transform:translateY(-3px)!important}
+.pack-img:hover{transform:scale(1.01)!important}
+/* uniform card image framing (all card art is 4:3 now) */
+.cat-card img,.prod img{object-fit:cover!important;aspect-ratio:4/3!important;padding:0!important;
+  background:var(--white)!important;border-bottom:1px solid var(--line)!important}
+/* calmer coloured section bands */
+.trust,.offers-wrap,.rev-wrap,.areas-wrap,.marquee{border-top-width:2px!important;border-bottom-width:2px!important}
+/* tone down busy background pattern */
+body::after{display:none!important}
+/* solid (no dashed) accents */
+.btn-w,.offer-chip,.sec-tag,.pack + .pack{border-style:solid!important}
+/* bigger nav logo */
+.logo-img{height:66px!important}
+@media(max-width:560px){.logo-img{height:48px!important}}
+/* ===== FULL-BLEED PHOTO HERO ===== */
+.hero-bleed{position:relative;min-height:90vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;background:#1A1330 url(img/hero.webp) center 35%/cover no-repeat;overflow:hidden;margin-top:-72px}
+.hero-bleed .hero-overlay{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(26,19,48,.62) 0%,rgba(26,19,48,.30) 38%,rgba(26,19,48,.78) 100%)}
+.hero-content{position:relative;z-index:2;max-width:880px;padding:150px 24px 96px;
+  display:flex;flex-direction:column;align-items:center;gap:22px}
+.hero-logo{height:148px;width:auto;background:#fff;border-radius:24px;padding:16px 30px;
+  box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.hero-bleed h1{font-family:'Unbounded',sans-serif;font-weight:900;text-transform:uppercase;color:#fff;
+  font-size:clamp(2.1rem,6vw,4.4rem);line-height:1.03;letter-spacing:-.02em;text-shadow:0 4px 22px rgba(0,0,0,.45)}
+.hero-bleed h1 .hl{color:var(--yellow)}
+.hero-bleed .hero-p{color:rgba(255,255,255,.94);font-size:1.18rem;font-weight:500;max-width:580px;
+  line-height:1.6;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.hero-bleed .offer-chip{background:rgba(255,255,255,.95);color:var(--ink)}
+.hero-bleed .hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+@media(max-width:560px){.hero-logo{height:104px;padding:12px 20px}.hero-content{padding:120px 18px 72px}}
+/* ===== END RESTYLE ===== */
+
 </style>
 </head>
 <body>
