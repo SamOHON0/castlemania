@@ -52,6 +52,8 @@ border:4px solid var(--purple);border-radius:999px;padding:8px 12px 8px 14px;box
 .nav-links>li>a{font-weight:700;font-size:14.5px;color:var(--ink);padding:9px 13px;border-radius:999px;transition:background .15s,transform .15s;display:block}
 .nav-links>li>a:hover,.nav-links>li>a.on{background:var(--yellow);transform:translateY(-2px)}
 .has-drop{position:relative}
+/* invisible bridge so menu stays open across the gap */
+.has-drop::after{content:'';position:absolute;top:100%;left:0;width:100%;height:18px}
 .drop{position:absolute;top:calc(100% + 12px);left:0;background:var(--white);border:4px solid var(--ink);border-radius:22px;box-shadow:var(--sh);padding:8px;min-width:250px;display:none;flex-direction:column;gap:2px;z-index:120}
 .has-drop:hover .drop,.has-drop:focus-within .drop{display:flex}
 .drop a{font-size:14px;font-weight:700;padding:10px 14px;border-radius:14px;color:var(--ink)}
